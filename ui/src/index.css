@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@property --shinner-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes shinner {
+  0% {
+    --shinner-angle: 0deg;
+  }
+
+  100% {
+    --shinner-angle: 360deg;
+  }
+}
