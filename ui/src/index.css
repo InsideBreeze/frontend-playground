@@ -17,3 +17,12 @@
     --shinner-angle: 360deg;
   }
 }
+
+@keyframes orbit {
+	from {
+		transform: rotate(0deg) translateX(80px)
+	}
+  to {
+	 transform: rotate(360deg) translateX(80px)
+	}
+}

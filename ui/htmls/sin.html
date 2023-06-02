@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+<style>
+		.sin {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: black;
+			animation: move 5s ease-in-out infinite;
+			transform: translate(
+        calc(var(--x) - 40vw),
+        calc(5 * sin(var(--angle)) * 16px)
+    	);
+		}
+		.container {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+		}
+
+		@keyframes move {
+			0% {
+				--x: 0;
+				--angle: 0deg;
+			}
+			100% {
+				--x: 80vw;
+				--angle: 360deg;
+			}
+		}
+
+		@property --x {
+			syntax: '<length>';
+			initial-value: 0vw;
+			inherits: false;
+		}
+
+		@property --angle {
+			syntax: '<angle>';
+			initial-value: 0deg;
+			inherits: false;
+		}
+</style>
+
+	</head>
+
+	<body>
+		<div class='container'>
+		<div class='sin' />
+		</div>
+	</body>
+
+</html>

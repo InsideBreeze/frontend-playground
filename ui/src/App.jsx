@@ -2,6 +2,7 @@ import { ExclamationCircleIcon, QuestionMarkCircleIcon, XMarkIcon } from "@heroi
 import Boop from "./components/Boop";
 import Button from "./components/Button";
 import Dropdown from "./components/Dropdown";
+import Orbit from "./components/Orbit";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 				<ExclamationCircleIcon className='h-10 w-10' />
 				</Boop>
 				</div>
+			<Orbit />
     </main>
   );
 }
